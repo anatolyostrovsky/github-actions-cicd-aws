@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Runa a Script
-        run: echo "Repo Copied!"
+        run: echo "Repo yes Copied!"
 
       - name: Create a ZIP file
         run: zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *.git
