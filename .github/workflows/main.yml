@@ -1,0 +1,30 @@
+name: CI-CD-Pipeline-AWS
+
+env:
+  EB_PACKAGE-S3_BUCKET_NAME: "flask-app-packages1298"
+  EB_APPLICATION_NAME: "New-Flask"
+  EB_ENVIRONMENT_NAME: "New-Flask-env-1"
+  DEPLOY_PACKAGE_NAME: "flask_app_${{github.sha}}.zip"
+  AWS_REGION_NAME: "us-east-1"
+
+on:
+  push:
+    branches:
+      -master
+
+
+jobs:
+  ci_part:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Clone the Repo
+        uses: actions/checkout@v1
+
+      - name: Runa a Script
+        run: echo Repo Copied!
+
+      - name: Create a ZIP file
+        run: zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *.git
+
+      
