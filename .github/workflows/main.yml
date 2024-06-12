@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Git Clone the Repo
+      - name: Git Clone Repo
         uses: actions/checkout@v1
 
       - name: Runa a Script
