@@ -14,7 +14,9 @@ on:
 
 
 jobs:
+ 
   ci_part:
+  
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +32,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::777257465499:role/Github-Actions
+          role-to-assume: arn:aws:iam::777257465499:role/Github-Actions-Role
           role-session-name: Github
           aws-region: ${{env.AWS_REGION_NAME}}
 
