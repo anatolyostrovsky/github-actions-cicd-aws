@@ -1,28 +1,99 @@
 
 <HTML>
-    <HEAD>
-    <TITLE>ADV-IT</TITLE>
-    <SCRIPT LANGUAGE="JavaScript">
-          var sizes = new Array(0,1,2,4,8,10,12);
-          sizes.pos = 0;
-        
-    function Elastic()
-    {
-        var el = document.all.elastic
-        if (null == el.direction)el.direction = 1
-        else if ((sizes.pos > sizes.length - 2) || (0 == sizes.pos))
-        el.direction *= -1
-        el.style.letterSpacing = sizes[sizes.pos += el.direction]
-    setTimeout('Elastic()',100)
-    }
+ 
+
+
+<body>
+<h1 id="title">Superhero Survey Form</h1>
+ <p id="description">Choose your destiny</p>
+
+<main>
+<form id="survey-form">
+  
+ <div class="form-field">
+   <label id="name-label">Name</label><br />
+    <input type="text" id="name" placeholder="Enter yor name" required>
+  </div>
+  
+  <div class="form-field">
+    <label id="email-label">E-mail</label><br />
+      <input type="email" id="email" placeholder="Enter your E-mail" required>
+  </div>
+  
+  <div class="form-field">
+    <label id="number-label">Age</label><br />
+      <input id="number" type="number" placeholder="Your age" min="7" max="100">
+  </div>
+  
+  <div class="radio-field">
+    <p>Would you like to be:</p>
+      <div id="radio-input">
+      <input type="radio" name="hero-or-not" value="superhero">Superhero
+    <br />
+      <input type="radio" name="hero-or-not" value="supervillain">Supervillain<br />
+    </div>
+  </div>
+  
+  
+  <div class="form-field">
+    <p>What superpower would you like to get</p>
+    <select id="dropdown">
+      <option disabled selected value>Select your superpower</option>
+      <option value="flying">Flying</option>
+      <option value="regen">Health regeneration</option>
+      <option value="teleport">Teleportation</option>
+      <option value="superspeed">Superspeed</option>
+      <option value="telekinesis">Telekinesis</option>
+    </select>
+      </div>
     
-    </SCRIPT>
-    <BODY  bgcolor=silver  onLoad=Elastic()>
-    <CENTER>
-    <font color="white"><h2>Hello from <font color="yellow">Denis Astahov!</font><br>
-    Welcome to Python Flask Web Page!
-    <font color="red"><H1 ID="elastic" ALIGN="Center">GitHub Actions RULEZZzz!</H1>
-    <br>
     
-    </body>
+    
+   <div class="checkbox-field">
+     <p>Daily Activities:</p>
+     
+     
+     <label>
+       <input name="activity" type="checkbox" value="workwithpolice">Work with police
+     </label>
+      <br />
+     <label>
+       <input name="activity" type="checkbox" value="fightauthority">Fight with authorities
+     </label>
+      <br />
+     <label>
+       <input name="activity" type="checkbox" value="savepeople">Saving people
+     </label>
+      <br />
+     
+     <label>
+       <input name="activity" type="checkbox" value="robbing">Robbing banks
+     </label>
+      <br />
+     
+     <label>
+       <input name="activity" type="checkbox" value="training">Training
+     </label>
+     </div>
+  
+  <div class="form-field">
+    <p>Short story of obtaining your power</p>
+      <textarea name="story" id="textarea" placeholder="Type your story here">
+         </textarea>
+  </div>
+  
+  <div class="form-field">
+    <button id="submit" type="submit">Submit
+      <br />
+      
+      </form>
+    </main>
+  </body>
+
+  
+  
+  
+  
+
+
     </HTML>
